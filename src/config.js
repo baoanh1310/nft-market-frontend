@@ -1,6 +1,6 @@
-const NFT_CONTRACT_NAME = process.env.NFT_CONTRACT_NAME ||'nft-tutorial.vbidev.testnet'
-const MARKET_CONTRACT_NAME = process.env.MARKET_CONTRACT_NAME || 'nft-market.vbidev.testnet'
-const FT_CONTRACT_NAME = process.env.FT_CONTRACT_NAME || 'ft.vbidev.testnet'
+const NFT_CONTRACT_NAME = process.env.NFT_CONTRACT_NAME || 'nft.l2e.testnet'
+const MARKET_CONTRACT_NAME = process.env.MARKET_CONTRACT_NAME || 'nft-market.l2e.testnet'
+const FT_CONTRACT_NAME = process.env.FT_CONTRACT_NAME || 'ft-lng.l2e.testnet'
 
 function getConfig(env) {
   switch (env) {

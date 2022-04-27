@@ -69,7 +69,7 @@ export default function App() {
                       <Routes/>
                   </div>
               </Content>
-              <Footer style={{ textAlign: 'center' }}>VBI Dev NFT Marketplace</Footer>
+              <Footer style={{ textAlign: 'center' }}>NEAR Learn2Earn NFT Marketplace</Footer>
           </Layout>
       </Layout>
   )

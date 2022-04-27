@@ -180,13 +180,14 @@ function Profile() {
 
     async function submitOnMint(data) {
         // call NFT contract mint_token
-        if (data.tokenId && data.media) {
+        if (data.tokenId && data.media && data.tokenLevel) {
             try {
                 await window.contractNFT.nft_mint({
                     token_id: data.tokenId,
                     receiver_id: window.accountId,
                     metadata: {
                         title: data.tokenTitle,
+                        level: data.tokenLevel,
                         description: data.description,
                         media: data.media
                     }
@@ -228,7 +229,7 @@ function Profile() {
                                     <DollarCircleOutlined onClick={() => handleSaleToken(item)} key={"sell"} />,
                                 ]}
                             >
-                                <Meta title={`${item.metadata.title} (${item.approved_account_ids[nearConfig.marketContractName] >= 0 ? "SALE" : "NOT SALE"})`} description={item.owner_id} />
+                                <Meta title={`${item.metadata.title} (${item.approved_account_ids[nearConfig.marketContractName] >= 0 ? "SALE" : "NOT SALE"})`} description={item.owner_id} level={item.metadata.level} />
                             </Card>
                         )
                     })

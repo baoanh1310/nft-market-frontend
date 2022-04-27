@@ -19,7 +19,7 @@ function ModalSale(props) {
                 <span style={{marginBottom: 10, display: "block"}}>Select token ({token}):</span>
                 <Radio.Group value={token} onChange={handleTokenChange}>
                     <Radio.Button value="NEAR">NEAR</Radio.Button>
-                    <Radio.Button value="VBIC">VBIC</Radio.Button>
+                    <Radio.Button value="LNG">LNG</Radio.Button>
                 </Radio.Group>
             </div>
             <div>

@@ -4,6 +4,7 @@ import { Modal, Input, Divider } from "antd";
 function ModalMintNFT(props) {
     const [tokenId, setTokenId] = useState("");
     const [tokenTitle, setTokenTitle] = useState("");
+    const [tokenLevel, setTokenLevel] = useState(1);
     const [description, setDescription] = useState("");
     const [media, setMedia] = useState("");
 
@@ -19,6 +20,8 @@ function ModalMintNFT(props) {
             <Input onChange={(e) => setTokenId(e.target.value)} style={{marginBottom: 15}}/>
             <span>Title:</span>
             <Input onChange={(e) => setTokenTitle(e.target.value)} style={{marginBottom: 15}}/>
+            <span>Tutor Level:</span>
+            <Input onChange={(e) => setTokenLevel(parseInt(e.target.value))} style={{marginBottom: 15}}/>
             <span>Description:</span>
             <Input onChange={(e) => setDescription(e.target.value)} style={{marginBottom: 15}}/>
             <span>Media:</span>

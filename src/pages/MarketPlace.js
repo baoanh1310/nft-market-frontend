@@ -38,10 +38,10 @@ function MarketPlace() {
             )
            } else {
                // Check balance
-                let vbicBalance = await window.contractFT.ft_balance_of({account_id: window.accountId})
-                if (vbicBalance < parseInt(item.sale_conditions.amount)) {
+                let lngBalance = await window.contractFT.ft_balance_of({account_id: window.accountId})
+                if (lngBalance < parseInt(item.sale_conditions.amount)) {
                     notification["warning"]({
-                        message: 'Số dư VBIC không đủ',
+                        message: 'Số dư LNG không đủ',
                         description:
                         'Tài khoản của bạn không đủ số dư để mua NFT!',
                     });
@@ -111,7 +111,7 @@ function MarketPlace() {
             // Get token list
             let tokenList = [];
             let nearBalance = await window.account.getAccountBalance();
-            let vbicBalance = await window.contractFT.ft_balance_of({account_id: window.accountId})
+            let lngBalance = await window.contractFT.ft_balance_of({account_id: window.accountId})
 
             tokenList.push({
                 isNative: true,
@@ -123,8 +123,8 @@ function MarketPlace() {
 
             tokenList.push({
                 isNative: false,
-                symbol: "VBIC",
-                balance: vbicBalance,
+                symbol: "LNG",
+                balance: lngBalance,
                 decimals: 18,
                 contractId: window.contractFT.contractId
             });
@@ -154,7 +154,7 @@ function MarketPlace() {
                             >
                                 <h1>{item.sale_conditions.is_native ? 
                                     utils.format.formatNearAmount(item.sale_conditions.amount) + " NEAR":
-                                    parseTokenWithDecimals(item.sale_conditions.amount, item.sale_conditions.decimals) + " VBIC"
+                                    parseTokenWithDecimals(item.sale_conditions.amount, item.sale_conditions.decimals) + " LNG"
                                 }</h1>
                                 <Meta title={item.token_id} description={item.owner_id} />
                             </Card>
