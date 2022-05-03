@@ -156,7 +156,7 @@ function MarketPlace() {
                                     utils.format.formatNearAmount(item.sale_conditions.amount) + " NEAR":
                                     parseTokenWithDecimals(item.sale_conditions.amount, item.sale_conditions.decimals) + " LNG"
                                 }</h1>
-                                <Meta title={item.token_id} description={item.owner_id} />
+                                <Meta title={`Tutor level: ${item.itemData.metadata.level}`} description={`Owner: ${item.owner_id}`} />
                             </Card>
                         )
                     })

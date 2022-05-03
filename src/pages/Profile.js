@@ -229,7 +229,7 @@ function Profile() {
                                     <DollarCircleOutlined onClick={() => handleSaleToken(item)} key={"sell"} />,
                                 ]}
                             >
-                                <Meta title={`${item.metadata.title} (${item.approved_account_ids[nearConfig.marketContractName] >= 0 ? "SALE" : "NOT SALE"})`} description={item.owner_id} level={item.metadata.level} />
+                                <Meta title={`${item.metadata.title} (${item.approved_account_ids[nearConfig.marketContractName] >= 0 ? "SALE" : "NOT SALE"})`} description={`Level: ${item.metadata.level}`} />
                             </Card>
                         )
                     })
